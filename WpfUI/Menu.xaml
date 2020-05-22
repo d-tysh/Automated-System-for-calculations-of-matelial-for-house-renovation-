@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfUI.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfUI"
+        mc:Ignorable="d"
+        Title="Menu" Height="550" Width="800" MinHeight="500" MaxHeight="600">
+    <Grid>
+        <Grid Margin="50, 70, 50, 70">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" Width="300" Height="50">Calculation of amount of materials for renovation</Button>
+            <Button Grid.Row="1" Width="300" Height="50">Calculation the cost of materials</Button>
+            <Button Grid.Row="2" Width="300" Height="50">Types of renivation works</Button>
+            <Button Grid.Row="3" Width="300" Height="50">Types of materials for renovation</Button>
+            <Button Grid.Row="4" Width="300" Height="50">About the system</Button>
+            <Button Grid.Row="5" Width="150" Height="50">Log out</Button>
+        </Grid>
+    </Grid>
+</Window>

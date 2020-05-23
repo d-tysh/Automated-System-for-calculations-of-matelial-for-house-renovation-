@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,38 @@ namespace WpfUI
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AutomatedSystemWindow : Window
     {
-        public MainWindow()
+        DBWorker dbWorker;
+
+        public AutomatedSystemWindow()
         {
             InitializeComponent();
+        }
+
+        public AutomatedSystemWindow(DBWorker dbWorker)
+        {
+            InitializeComponent();
+            this.dbWorker = dbWorker;
+        }
+
+        private void EnterTheSystem_Click(object sender, RoutedEventArgs e)
+        {
+            var auth = new Authorization();
+            auth.Show();
+            Close();
+        }
+
+        private void Registration_Click(object sender, RoutedEventArgs e)
+        {
+            var reg = new Registration();
+            reg.Show();
+            Close();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

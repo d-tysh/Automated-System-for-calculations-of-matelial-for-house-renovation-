@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,24 @@ namespace WpfUI
     /// </summary>
     public partial class CalculationMaterials : Window
     {
+        DBWorker dBWorker;
+
         public CalculationMaterials()
         {
             InitializeComponent();
+        }
+
+        public CalculationMaterials(DBWorker dBWorker)
+        {
+            InitializeComponent();
+            this.dBWorker = dBWorker;
+        }
+
+        private void ToMenu_Click(object sender, RoutedEventArgs e)
+        {
+            var toMenu = new Menu();
+            toMenu.Show();
+            Close();
         }
     }
 }

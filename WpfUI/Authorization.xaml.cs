@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,26 @@ namespace WpfUI
     /// </summary>
     public partial class Authorization : Window
     {
+        DBWorker dBWorker;
+
         public Authorization()
         {
             InitializeComponent();
+            dBWorker = new DBWorker();
+        }
+
+        private void Login_Click(object sender, RoutedEventArgs e)
+        {
+            var login = new Menu();
+            if (userName.Text == "")
+            {
+                MessageBox.Show("Enter the data!");
+            }
+            else
+            {
+                login.Show();
+                Close();
+            }
         }
     }
 }

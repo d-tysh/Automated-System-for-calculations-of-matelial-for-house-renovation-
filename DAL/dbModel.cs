@@ -5,28 +5,22 @@ namespace DAL
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class dbModel : DbContext
+    public partial class DBModel : DbContext
     {
-        public dbModel()
-            : base("name=dbModel")
+        public DBModel()
+            : base("name=DBModel")
         {
         }
 
+        public virtual DbSet<RenovationWork> RenovationWorks { get; set; }
+        public virtual DbSet<TypesMaterial> TypesMaterials { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>()
-                .Property(e => e.Name)
+            modelBuilder.Entity<RenovationWork>()
+                .Property(e => e.Description)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<User>()
-                .Property(e => e.Login)
-                .IsFixedLength();
-
-            modelBuilder.Entity<User>()
-                .Property(e => e.Password)
-                .IsFixedLength();
         }
     }
 }

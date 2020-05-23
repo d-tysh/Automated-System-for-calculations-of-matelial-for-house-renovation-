@@ -7,14 +7,12 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class UserRepository : GenericRepository<User>
+    public class UserRepository : GenericRepository<User>
     {
         public UserRepository(DbContext context) : base(context)
         {
 
         }
-
-
 
     }
 }

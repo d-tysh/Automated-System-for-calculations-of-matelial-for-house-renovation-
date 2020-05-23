@@ -84,11 +84,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBWorker.cs" />
     <Compile Include="Calculation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AGenericService.cs" />
     <Compile Include="Services\IGenericService.cs" />
+    <Compile Include="Services\RenovationWorkService.cs" />
+    <Compile Include="Services\TypesMaterialService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="UserManipulation.cs" />
   </ItemGroup>

@@ -16,12 +16,12 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Width="300" Height="50">Calculation of amount of materials for renovation</Button>
-            <Button Grid.Row="1" Width="300" Height="50">Calculation the cost of materials</Button>
-            <Button Grid.Row="2" Width="300" Height="50">Types of renivation works</Button>
-            <Button Grid.Row="3" Width="300" Height="50">Types of materials for renovation</Button>
-            <Button Grid.Row="4" Width="300" Height="50">About the system</Button>
-            <Button Grid.Row="5" Width="150" Height="50">Log out</Button>
+            <Button Grid.Row="0" Width="300" Height="50" Click="CalculationMaterial_Click">Calculation of amount of materials for renovation</Button>
+            <Button Grid.Row="1" Width="300" Height="50" Click="CalculationCost_Click">Calculation the cost of materials</Button>
+            <Button Grid.Row="2" Width="300" Height="50" Click="TepesRenovation_Click">Types of renovation works</Button>
+            <Button Grid.Row="3" Width="300" Height="50" Click="TypesMaterials_Click">Types of materials for renovation</Button>
+            <Button Grid.Row="4" Width="300" Height="50" Click="About_Click">About the system</Button>
+            <Button Grid.Row="5" Width="150" Height="50" Click="LogOut_Click">Log out</Button>
         </Grid>
     </Grid>
 </Window>

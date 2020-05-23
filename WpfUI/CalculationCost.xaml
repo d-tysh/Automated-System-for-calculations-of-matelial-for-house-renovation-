@@ -50,7 +50,7 @@
             </Grid>
 
             <Button Grid.Row="4" Width="140" Height="40" FontSize="15">To Calculate</Button>
-            <Button Grid.Row="5" Width="140" Height="40" FontSize="15">To Menu</Button>
+            <Button Grid.Row="5" Width="140" Height="40" FontSize="15" Click="ToMenu_Click">To Menu</Button>
             
         </Grid>
     </Grid>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,24 @@ namespace WpfUI
     /// </summary>
     public partial class Registration : Window
     {
+        DBWorker dbWorker;
+
         public Registration()
         {
             InitializeComponent();
+        }
+
+        public Registration(DBWorker dbWorker)
+        {
+            InitializeComponent();
+            this.dbWorker = dbWorker;
+        }
+
+        private void ToRegistr_Click(object sender, RoutedEventArgs e)
+        {
+            var toReg = new AutomatedSystemWindow();
+            toReg.Show();
+            Close();
         }
     }
 }

@@ -26,6 +26,7 @@ namespace WpfUI
         public AutomatedSystemWindow()
         {
             InitializeComponent();
+            this.dbWorker = new DBWorker();
         }
 
         public AutomatedSystemWindow(DBWorker dbWorker)
@@ -36,14 +37,14 @@ namespace WpfUI
 
         private void EnterTheSystem_Click(object sender, RoutedEventArgs e)
         {
-            var auth = new Authorization();
+            var auth = new Authorization(dbWorker);
             auth.Show();
             Close();
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)
         {
-            var reg = new Registration();
+            var reg = new Registration(dbWorker);
             reg.Show();
             Close();
         }
@@ -51,6 +52,11 @@ namespace WpfUI
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+        //    dbWorker.
         }
     }
 }

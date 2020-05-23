@@ -35,9 +35,14 @@ namespace WpfUI
 
         private void ToMenu_Click(object sender, RoutedEventArgs e)
         {
-            var toMenu = new Menu();
+            var toMenu = new Menu(dbWorker);
             toMenu.Show();
             Close();
+        }
+
+        private void ToCalculate_Click(object sender, RoutedEventArgs e)
+        {
+            costMaterials.Text = (double.Parse(enterNumber.Text) * double.Parse(enterPrice.Text)).ToString() + " conditional unit(s)";
         }
     }
 }

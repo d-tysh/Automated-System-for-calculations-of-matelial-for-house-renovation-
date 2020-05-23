@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,26 +21,59 @@ namespace WpfUI
     /// </summary>
     public partial class Authorization : Window
     {
-        DBWorker dBWorker;
+        DBWorker dbWorker;
 
         public Authorization()
         {
             InitializeComponent();
-            dBWorker = new DBWorker();
+            dbWorker = new DBWorker();
+        }
+
+        public Authorization(DBWorker dbWorker)
+        {
+            InitializeComponent();
+            this.dbWorker = dbWorker;
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            var login = new Menu();
-            if (userName.Text == "")
+            if (userName.Text.Length == 0)
             {
-                MessageBox.Show("Enter the data!");
+                MessageBox.Show("Enter user name!");
+                return;
             }
-            else
+
+            if (password.Password.Length == 0)
             {
-                login.Show();
-                Close();
+                MessageBox.Show("Enter password!");
+                return;
             }
+
+            try
+            {
+                var users = dbWorker.UserService.FindBy((User u) => u.Login == userName.Text && u.Password == password.Password);
+
+                var count = users.ToList();
+
+                if (count.Count != 0)
+                {
+                    var login = new Menu(dbWorker);
+                    login.Show();
+                    Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while DB requesting", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            var back = new AutomatedSystemWindow(dbWorker);
+            back.Show();
+            Close();
         }
     }
 }

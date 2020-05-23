@@ -22,5 +22,11 @@ namespace BLL
             RenovationWorkService = new RenovationWorkService(new RenovationWorkRepository(context));
             TypesMaterialService = new TypesMaterialService(new TypesMaterialRepository(context));
         }
+
+        /*public Close()
+        {
+            context.Database.Connection.
+        }
+        */
     }
 }

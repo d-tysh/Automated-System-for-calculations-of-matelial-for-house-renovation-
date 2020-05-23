@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfUI"
         mc:Ignorable="d"
-        Title="Automated system" Height="450" Width="600" MinHeight="350" MaxHeight="550" Background="AliceBlue">
+        Title="Automated system" Height="450" Width="600" MinHeight="350" MaxHeight="550" Background="AliceBlue" Closing="Window_Closing">
     <Grid>
         <Grid Margin="50, 70, 50, 70">
             <Grid.RowDefinitions>

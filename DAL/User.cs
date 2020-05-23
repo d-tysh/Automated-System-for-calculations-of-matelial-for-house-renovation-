@@ -18,5 +18,10 @@ namespace DAL
 
         [StringLength(255)]
         public string Password { get; set; }
+
+        public override string ToString()
+        {
+            return $"id: {this.Id}; Name: {this.Name}; Login: {this.Login}; Password: {this.Password}";
+        }
     }
 }

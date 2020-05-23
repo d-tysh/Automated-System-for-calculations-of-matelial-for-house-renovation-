@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,8 +36,39 @@ namespace WpfUI
 
         private void ToRegistr_Click(object sender, RoutedEventArgs e)
         {
-            var toReg = new AutomatedSystemWindow();
-            toReg.Show();
+            if (name.Text.Length > 0 && userName.Text.Length > 0)
+            {
+                if (password.SecurePassword.Length > 0 && repeatPassword.SecurePassword.Length > 0)
+                {
+                    if (password.Password != repeatPassword.Password)
+                    {
+                        MessageBox.Show("Passwords must be equals!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                    else
+                    {
+                        var user = new User() { Name = name.Text, Login = userName.Text, Password = password.Password };
+                        try
+                        {
+                            var aUser = dbWorker.UserService.Add(user);
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Error while DB requesting", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                            return;
+                        }
+
+                        var toReg = new AutomatedSystemWindow(dbWorker);
+                        toReg.Show();
+                        Close();
+                    }
+                }
+            }
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            var back = new AutomatedSystemWindow(dbWorker);
+            back.Show();
             Close();
         }
     }

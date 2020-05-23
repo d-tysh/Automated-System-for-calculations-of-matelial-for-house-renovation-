@@ -37,7 +37,7 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" FontSize="15">Enter the price per unit :</TextBlock>
-                <PasswordBox Name="enterPrice" Grid.Column="1" Height="32" FontSize="15"></PasswordBox>
+                <TextBox Name="enterPrice" Grid.Column="1" Height="32" FontSize="15"></TextBox>
             </Grid>
 
             <Grid Grid.Row="2" Height="50">
@@ -46,10 +46,10 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" FontSize="15">The cost of the materials :</TextBlock>
-                <PasswordBox Name="costMaterials" Grid.Column="1" Height="32" FontSize="15"></PasswordBox>
+                <TextBox Name="costMaterials" IsReadOnly="True" Grid.Column="1" Height="32" FontSize="15"></TextBox>
             </Grid>
 
-            <Button Grid.Row="4" Width="140" Height="40" FontSize="15">To Calculate</Button>
+            <Button Grid.Row="4" Width="140" Height="40" FontSize="15" Click="ToCalculate_Click">To Calculate</Button>
             <Button Grid.Row="5" Width="140" Height="40" FontSize="15" Click="ToMenu_Click">To Menu</Button>
             
         </Grid>

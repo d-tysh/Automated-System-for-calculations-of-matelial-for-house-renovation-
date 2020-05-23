@@ -12,7 +12,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Height="40" Width="150">To Calculate</Button>
+            <Button Height="40" Width="150" Click="ToCalculate_Click">To Calculate</Button>
             <Button Grid.Column="1" Height="40" Width="150" Click="ToMenu_Click">To Menu</Button>
         </Grid>
         
@@ -146,7 +146,7 @@
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalContentAlignment="Center" FontSize="15">Putty for spackling :</Label>
-                        <TextBox Name="puttyForSpackling" Grid.Column="1" Height="25" FontSize="15"></TextBox>
+                        <TextBox Name="puttyForSpackling" IsReadOnly="True" Grid.Column="1" Height="25" FontSize="15"></TextBox>
                     </Grid>
                     <Grid Grid.Row="1" Height="50">
                         <Grid.ColumnDefinitions>
@@ -154,7 +154,7 @@
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalContentAlignment="Center" FontSize="15">Primer for walls :</Label>
-                        <TextBox Name="primerForWalls" Grid.Column="1" Height="25" FontSize="15"></TextBox>
+                        <TextBox Name="primerForWalls" IsReadOnly="True" Grid.Column="1" Height="25" FontSize="15"></TextBox>
                     </Grid>
                     <Grid Grid.Row="2" Height="50">
                         <Grid.ColumnDefinitions>
@@ -162,7 +162,7 @@
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalContentAlignment="Center" FontSize="15">Wallpaper :</Label>
-                        <TextBox Name="wallpaper" Grid.Column="1" Height="25" FontSize="15"></TextBox>
+                        <TextBox Name="wallpaper" IsReadOnly="True" Grid.Column="1" Height="25" FontSize="15"></TextBox>
                     </Grid>
                     <Grid Grid.Row="3" Height="50">
                         <Grid.ColumnDefinitions>
@@ -170,7 +170,7 @@
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalContentAlignment="Center" FontSize="15">Wallpaper glue :</Label>
-                        <TextBox Name="wallpaperGlue" Grid.Column="1" Height="25" FontSize="15"></TextBox>
+                        <TextBox Name="wallpaperGlue" IsReadOnly="True" Grid.Column="1" Height="25" FontSize="15"></TextBox>
                     </Grid>
                     <Grid Grid.Row="4" Height="50">
                         <Grid.ColumnDefinitions>
@@ -178,7 +178,7 @@
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalContentAlignment="Center" FontSize="15">Windowsill :</Label>
-                        <TextBox Name="windowsSill" Grid.Column="1" Height="25" FontSize="15"></TextBox>
+                        <TextBox Name="windowsSill" IsReadOnly="True" Grid.Column="1" Height="25" FontSize="15"></TextBox>
                     </Grid>
                     <Grid Grid.Row="5" Height="50">
                         <Grid.ColumnDefinitions>
@@ -186,7 +186,7 @@
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalContentAlignment="Center" FontSize="15">Cornice :</Label>
-                        <TextBox Name="cornice" Grid.Column="1" Height="25" FontSize="15"></TextBox>
+                        <TextBox Name="cornice" IsReadOnly="True" Grid.Column="1" Height="25" FontSize="15"></TextBox>
                     </Grid>
                     <Grid Grid.Row="6" Height="50">
                         <Grid.ColumnDefinitions>
@@ -194,7 +194,7 @@
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Label Grid.Column="0" VerticalContentAlignment="Center" FontSize="15">Base board :</Label>
-                        <TextBox Name="baseBoard" Grid.Column="1" Height="25" FontSize="15"></TextBox>
+                        <TextBox Name="baseBoard" IsReadOnly="True" Grid.Column="1" Height="25" FontSize="15"></TextBox>
                     </Grid>
                 </Grid>
             </GroupBox>

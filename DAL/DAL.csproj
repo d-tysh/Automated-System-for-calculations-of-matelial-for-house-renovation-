@@ -50,16 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBModel.cs" />
-    <Compile Include="GenericRepository.cs" />
-    <Compile Include="IGenericRepository.cs" />
+    <Compile Include="ASModel.cs" />
+    <Compile Include="CalculationHistory.cs" />
+    <Compile Include="Repositories\CalculationHistoryRepository.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Repositories\IGenericRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RenovationWork.cs" />
-    <Compile Include="RenovationWorkRepository.cs" />
+    <Compile Include="Repositories\RenovationWorkRepository.cs" />
     <Compile Include="TypesMaterial.cs" />
-    <Compile Include="TypesMaterialRepository.cs" />
+    <Compile Include="Repositories\TypesMaterialRepository.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="UserRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

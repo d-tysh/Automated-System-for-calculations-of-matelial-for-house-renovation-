@@ -24,12 +24,11 @@ namespace WpfUI
 
         public WindowUsers()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             dBWorker = new DBWorker();
 
             this.listViewUsers.ItemsSource = dBWorker.UserService.GetAll().ToList();
-
-
         }
     }
 }

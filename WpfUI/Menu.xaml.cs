@@ -24,11 +24,13 @@ namespace WpfUI
 
         public Menu()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
         public Menu(DBWorker dbWorker)
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             this.dbWorker = dbWorker;
         }
@@ -75,5 +77,11 @@ namespace WpfUI
             Close();
         }
 
+        private void CalculationHistory_Click(object sender, RoutedEventArgs e)
+        {
+            var logout = new CalculationHistoryWindow(dbWorker);
+            logout.Show();
+            Close();
+        }
     }
 }

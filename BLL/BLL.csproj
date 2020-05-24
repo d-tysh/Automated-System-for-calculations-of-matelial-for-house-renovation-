@@ -89,6 +89,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AGenericService.cs" />
+    <Compile Include="Services\CalculationHistoryService.cs" />
     <Compile Include="Services\IGenericService.cs" />
     <Compile Include="Services\RenovationWorkService.cs" />
     <Compile Include="Services\TypesMaterialService.cs" />

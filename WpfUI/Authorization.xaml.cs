@@ -25,12 +25,14 @@ namespace WpfUI
 
         public Authorization()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             dbWorker = new DBWorker();
         }
 
         public Authorization(DBWorker dbWorker)
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             this.dbWorker = dbWorker;
         }
@@ -57,6 +59,7 @@ namespace WpfUI
 
                 if (count.Count != 0)
                 {
+                    this.dbWorker.UserId = count[0].Id;
                     var login = new Menu(dbWorker);
                     login.Show();
                     Close();

@@ -24,11 +24,13 @@ namespace WpfUI
 
         public TypesMaterials()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
         public TypesMaterials(DBWorker dbWorker)
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             this.dbWorker = dbWorker;
         }

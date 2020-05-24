@@ -24,11 +24,13 @@ namespace WpfUI
 
         public TypesRenovation()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
         public TypesRenovation(DBWorker dbWorker)
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             this.dbWorker = dbWorker;
         }

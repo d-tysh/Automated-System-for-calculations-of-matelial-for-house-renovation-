@@ -5,13 +5,14 @@ namespace DAL
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class DBModel : DbContext
+    public partial class ASModel : DbContext
     {
-        public DBModel()
-            : base("name=DBModel")
+        public ASModel()
+            : base("name=ASModel")
         {
         }
 
+        public virtual DbSet<CalculationHistory> CalculationHistories { get; set; }
         public virtual DbSet<RenovationWork> RenovationWorks { get; set; }
         public virtual DbSet<TypesMaterial> TypesMaterials { get; set; }
         public virtual DbSet<User> Users { get; set; }

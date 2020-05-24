@@ -25,12 +25,14 @@ namespace WpfUI
 
         public AutomatedSystemWindow()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             this.dbWorker = new DBWorker();
         }
 
         public AutomatedSystemWindow(DBWorker dbWorker)
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             this.dbWorker = dbWorker;
         }

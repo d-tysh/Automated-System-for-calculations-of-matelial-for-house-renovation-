@@ -8,6 +8,12 @@ namespace DAL
 
     public partial class User
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public User()
+        {
+            CalculationHistories = new HashSet<CalculationHistory>();
+        }
+
         public int Id { get; set; }
 
         [StringLength(255)]
@@ -19,9 +25,7 @@ namespace DAL
         [StringLength(255)]
         public string Password { get; set; }
 
-        public override string ToString()
-        {
-            return $"id: {this.Id}; Name: {this.Name}; Login: {this.Login}; Password: {this.Password}";
-        }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CalculationHistory> CalculationHistories { get; set; }
     }
 }

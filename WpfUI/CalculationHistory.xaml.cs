@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,23 +17,25 @@ using System.Windows.Shapes;
 namespace WpfUI
 {
     /// <summary>
-    /// Interaction logic for CalculationCost.xaml
+    /// Interaction logic for CalculationHistory.xaml
     /// </summary>
-    public partial class CalculationCost : Window
+    public partial class CalculationHistoryWindow : Window
     {
-        DBWorker dbWorker;
+        private DBWorker dbWorker;
 
-        public CalculationCost()
+        public CalculationHistoryWindow()
         {
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
-        public CalculationCost(DBWorker dbWorker)
+        public CalculationHistoryWindow(DBWorker dbWorker)
         {
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             this.dbWorker = dbWorker;
+            this.listViewHistory.ItemsSource = dbWorker.CalculationHistoryService.GetAll().ToList();
+
         }
 
         private void ToMenu_Click(object sender, RoutedEventArgs e)
@@ -44,7 +47,19 @@ namespace WpfUI
 
         private void ToCalculate_Click(object sender, RoutedEventArgs e)
         {
-            costMaterials.Text = (double.Parse(enterNumber.Text) * double.Parse(enterPrice.Text)).ToString() + " conditional unit(s)";
+            if (this.listViewHistory.SelectedItem != null)
+            {
+                CalculationHistory cH = this.listViewHistory.SelectedItem as CalculationHistory;
+                var toMenu = new CalculationMaterials(dbWorker, cH);
+                toMenu.Show();
+                Close();
+            }
+            else
+            {
+
+            }
+
         }
+
     }
 }

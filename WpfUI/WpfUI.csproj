@@ -71,6 +71,9 @@
     <Compile Include="CalculationCost.xaml.cs">
       <DependentUpon>CalculationCost.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CalculationHistory.xaml.cs">
+      <DependentUpon>CalculationHistory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="CalculationCost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CalculationHistory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -42,3 +42,5 @@ C:\Users\DIMA\source\repos\ASCMHR\WpfUI\obj\Debug\AboutSystem.g.cs
 C:\Users\DIMA\source\repos\ASCMHR\WpfUI\obj\Debug\TypesMaterials.baml
 C:\Users\DIMA\source\repos\ASCMHR\WpfUI\obj\Debug\TypesRenovation.baml
 C:\Users\DIMA\source\repos\ASCMHR\WpfUI\obj\Debug\AboutSystem.baml
+C:\Users\DIMA\source\repos\ASCMHR\WpfUI\obj\Debug\CalculationHistory.g.cs
+C:\Users\DIMA\source\repos\ASCMHR\WpfUI\obj\Debug\CalculationHistory.baml

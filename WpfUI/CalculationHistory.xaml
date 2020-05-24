@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfUI"
         mc:Ignorable="d"
-        Title="CalculationHistory" Height="600" Width="1200">
+        Title="CalculationHistory" Height="600" Width="950">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="9*"></RowDefinition>
@@ -14,19 +14,19 @@
         <ListView Name="listViewHistory">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Calculation time" Width="100" DisplayMemberBinding="{Binding Path=CalcTime}"/>
+                    <GridViewColumn Header="Calculation time" Width="130" DisplayMemberBinding="{Binding Path=CalcTime}"/>
 
-                    <GridViewColumn Header="Object length" Width="150" DisplayMemberBinding="{Binding Path=ObjectLength}"/>
-                    <GridViewColumn Header="Oblect height" Width="150" DisplayMemberBinding="{Binding Path=ObjectHeight}"/>
-                    <GridViewColumn Header="Object width" Width="150" DisplayMemberBinding="{Binding Path=ObjectWidth}"/>
+                    <GridViewColumn Header="Object length" Width="100" DisplayMemberBinding="{Binding Path=ObjectLength}"/>
+                    <GridViewColumn Header="Oblect height" Width="100" DisplayMemberBinding="{Binding Path=ObjectHeight}"/>
+                    <GridViewColumn Header="Object width" Width="100" DisplayMemberBinding="{Binding Path=ObjectWidth}"/>
 
                     <GridViewColumn Header="Number of windows" Width="50" DisplayMemberBinding="{Binding Path=NuberWindow}"/>
-                    <GridViewColumn Header="Height of window" Width="150" DisplayMemberBinding="{Binding Path=HeightWindow}"/>
-                    <GridViewColumn Header="Width of window" Width="150" DisplayMemberBinding="{Binding Path=WidthWindow}"/>
+                    <GridViewColumn Header="Height of window" Width="100" DisplayMemberBinding="{Binding Path=HeightWindow}"/>
+                    <GridViewColumn Header="Width of window" Width="100" DisplayMemberBinding="{Binding Path=WidthWindow}"/>
 
                     <GridViewColumn Header="Number of doors" Width="50" DisplayMemberBinding="{Binding Path=NumberDoors}"/>
-                    <GridViewColumn Header="Height of door" Width="150" DisplayMemberBinding="{Binding Path=HeightDoors}"/>
-                    <GridViewColumn Header="Width of door" Width="150" DisplayMemberBinding="{Binding Path=WidthDoors}"/>
+                    <GridViewColumn Header="Height of door" Width="100" DisplayMemberBinding="{Binding Path=HeightDoors}"/>
+                    <GridViewColumn Header="Width of door" Width="100" DisplayMemberBinding="{Binding Path=WidthDoors}"/>
                 </GridView>
             </ListView.View>
         </ListView>

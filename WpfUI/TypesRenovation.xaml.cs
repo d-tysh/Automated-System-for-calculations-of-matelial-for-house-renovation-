@@ -33,6 +33,14 @@ namespace WpfUI
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             this.dbWorker = dbWorker;
+            this.listViewRenovation.ItemsSource = dbWorker.RenovationWorkService.GetAll().ToList();
+        }
+
+        private void ToMenu_Click(object sender, RoutedEventArgs e)
+        {
+                var toMenu = new Menu(dbWorker);
+                toMenu.Show();
+                Close();
         }
     }
 }

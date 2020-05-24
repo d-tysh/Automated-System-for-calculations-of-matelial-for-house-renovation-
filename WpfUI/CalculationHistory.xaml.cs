@@ -34,8 +34,11 @@ namespace WpfUI
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             this.dbWorker = dbWorker;
-            this.listViewHistory.ItemsSource = dbWorker.CalculationHistoryService.GetAll().ToList();
-
+            //this.listViewHistory.ItemsSource = dbWorker.CalculationHistoryService.GetAll().ToList().Select((c) => c.UserId == dbWorker.UserId);
+            var calcs = dbWorker.CalculationHistoryService.GetAll().ToList();
+            this.listViewHistory.ItemsSource = (from calc in calcs
+             where calc.UserId == dbWorker.UserId
+             select calc).ToList();
         }
 
         private void ToMenu_Click(object sender, RoutedEventArgs e)
@@ -54,10 +57,7 @@ namespace WpfUI
                 toMenu.Show();
                 Close();
             }
-            else
-            {
-
-            }
+            
 
         }
 

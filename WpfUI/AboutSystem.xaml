@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfUI"
         mc:Ignorable="d"
-        Title="AboutSystem" Height="450" Width="800">
+        Title="AboutSystem" Height="450" Width="600">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Width="500" Height="300" TextWrapping="Wrap">
+            The automated system of calculation of materials for repair of the house is a system which is intended for automation of process of selection of quantity of materials during construction or repair. The system helps the user to simplify the calculation process.
+            The purpose of creating an automated system (AS) - to automate the calculation of materials for home repairs.
+            Purpose - to facilitate the calculation process and minimize the amount of actions and knowledge for constant work with the system.
+            The system is designed for use on automated terminals, personal computers and laptops.
+            The input data for the speaker are the parameters of buildings, premises, rooms, etc., which will be needed for further calculations to determine the amount of materials for repair.
+            The source data is a list of possible materials (available for viewing without calculations) and a list of the number of materials that have been selected by the user for calculations.
+            The system works in a simple mode of calculations, accepting the user's request for the necessary information, according to the input data.
+        </TextBlock>
+        <Grid Grid.Row="1">
+            <Button Width="140" Height="40" FontSize="15" Click="ToMenu_Click">To Menu</Button>
+        </Grid>
     </Grid>
 </Window>

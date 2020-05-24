@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfUI"
         mc:Ignorable="d"
-        Title="TypesRenovation" Height="450" Width="800">
+        Title="TypesRenovation" Height="450" Width="800" MinWidth="800" MaxWidth="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListView Name="listViewRenovation">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Type of renovation work" Width="200" DisplayMemberBinding="{Binding Path=Name}"/>
+                    <GridViewColumn Header="Description" Width="600" DisplayMemberBinding="{Binding Path=Description}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Grid Grid.Row="1">
+            <Button Width="140" Height="40" FontSize="15" HorizontalAlignment="Center" Click="ToMenu_Click">To Menu</Button>
+        </Grid>
     </Grid>
 </Window>

@@ -24,14 +24,22 @@ namespace WpfUI
 
         public AboutSystem()
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
         public AboutSystem(DBWorker dbWorker)
         {
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             InitializeComponent();
             this.dbWorker = dbWorker;
         }
 
+        private void ToMenu_Click(object sender, RoutedEventArgs e)
+        {
+            var toMenu = new Menu(dbWorker);
+            toMenu.Show();
+            Close();
+        }
     }
 }

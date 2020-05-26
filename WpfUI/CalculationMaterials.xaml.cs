@@ -78,7 +78,6 @@ namespace WpfUI
 
 
 
-
             double door = double.Parse(widthOfDoor.Text) * double.Parse(heightOfDoor.Text) * double.Parse(numberOfDoors.Text);
             double window = double.Parse(widthOfWindow.Text) * double.Parse(heightOfWindow.Text) * double.Parse(numberOfWindows.Text);
             double wallSquare = (double.Parse(widthInMeters.Text) + double.Parse(lengthInMeters.Text)) * double.Parse(heightInMeters.Text) * 2;

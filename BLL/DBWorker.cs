@@ -29,17 +29,5 @@ namespace BLL
 
         public int UserId { get; set; }
 
-        
-
-        /*public void Authorization(int id)
-        {
-            userId = id;
-        }*/
-
-        /*public Close()
-        {
-            context.Database.Connection.
-        }
-        */
     }
 }
